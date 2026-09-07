@@ -1,0 +1,6 @@
+Lab: CORS vulnerability with basic origin reflection
+
+goal to exploit a CORS vulnerability
+
+step 1 test if it works with origin header by setting up http://random.website.com
+step 2 
