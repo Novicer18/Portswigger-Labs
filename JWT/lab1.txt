@@ -1,0 +1,15 @@
+Lab: JWT authentication bypass via unverified signature
+
+steps to exploit this lab 
+
+step 1 = login with the given credentials then try to navigate to /admin 
+observe "Admin interface only available if logged in as an administrator " on  the admin page 
+so 
+step 2 = capture the session token and decode it on the JWT decoder then observe sub: wiener
+change that to sub:"administrator" and copy that jwt token and paste it on cookie then send it 
+with /admin panel then observe it works well 
+
+step 3 = with that administrator jwt token send a post request to /admin/delete?username=carlos to delete 
+the specific user
+
+then the lab solved

