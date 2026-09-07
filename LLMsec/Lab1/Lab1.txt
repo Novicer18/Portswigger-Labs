@@ -1,0 +1,10 @@
+1 Lab: Exploiting LLM APIs with excessive agency
+goal: using LLM to delete the user carlos
+
+here are the steps i used to abuse the LLM 
+
+first what is "Exploiting LLM APIs with excessive agency"
+
+"""The term "excessive agency" refers to a situation in which an LLM has access to APIs that can access sensitive information and can be persuaded to use those APIs unsafely. This enables attackers to push the LLM beyond its intended scope and launch attacks via its APIs. """
+
+here are the prompts i used on the image
