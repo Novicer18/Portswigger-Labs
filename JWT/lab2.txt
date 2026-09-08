@@ -1,0 +1,14 @@
+Lab: JWT authentication bypass via flawed signature verification
+
+steps to solve the lab
+
+step 1 = login with the given credentials and capture the request on the burp suite
+ste 2= copy the session of the user and paste it on the JWT editor so change that alg: value to none 
+step 3 = and change  the sub to administrator
+
+step 4 = try to navigate http://your-labid.net/admin
+step 5 = observe the output which access the admin panel then 
+step 6 = by that authenticated administrator session get escalate and delete one user carlos
+by sending a request ot /admin/delete?username=carlos
+step 7 solved the lab
+
